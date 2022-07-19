@@ -1,9 +1,3 @@
-FROM tomcat:latest
-
-LABEL maintainer="Nidhi Gupta"
-
-ADD ./target/LoginWebApp-1.war /usr/local/tomcat/webapps/
-
-EXPOSE 8080
-
+FROM tomcat
+COPY Hello.war /usr/local/tomcat/webapps
 CMD ["catalina.sh", "run"]
